@@ -1,6 +1,6 @@
 ![alt text][logo]
 
-[logo]: https://github.com/Ubuntuz/PyroBox/pyrobox-logo.jpg "PyroBox"
+[logo]: https://github.com/Ubuntuz/PyroBox/blob/master/pyrobox-logo.jpg "PyroBox"
 
 # PyroBox
 http://ubuntuz.github.io/PyroBox
