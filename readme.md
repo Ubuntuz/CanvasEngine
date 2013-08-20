@@ -134,6 +134,8 @@ See [http://canvasengine.net/doc](http://canvasengine.net/doc)
 * Scene Structure
     * Overlay scenes 
     * Pause scene
+* Engine Structure
+    * Only load features you need 
 * Multiplayer model
 * Preloading
     * Get the percentage of loading
