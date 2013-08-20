@@ -40,24 +40,132 @@
 
         <h3>
 
-<p>A HTML5 2D/3D Content Creation Engine - "Use whats inside the box to create something out of the box." Perfect for Games, Presentations, Tech Demos, anything!</p>
-
+<p>A HTML5 2D/3D Content Creation Engine - "Use whats inside the box to create something out of the box." <br>Perfect for Games, Presentations, Tech Demos, anything!</p>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 <h3>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Get Started</h3>
 
 <p>1. Add this to your index.html:</p>
-<code><script src="canvasengine.js"></script>
-<canvas id="canvas_id" width="640" height="480"></canvas></code>
-<p>2. Initialize the canvas:</p>
-<code>var canvas = CE.defines("canvas_id").ready(function() { 
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;script src="canvasengine-X.Y.Z.all.min.js"&gt;&lt;/script&gt;
+&lt;canvas id="canvas_id" width="640" height="480"&gt;&lt;/canvas&gt;
+</code></pre>
 
-});
-</code>
+<p>2. Initialize the canvas:</p>
+<pre><code>var canvas = CE.defines("canvas_id").ready(function() { 
+
+});</code></pre>
 <p>The method 'ready' is called when the canvas is ready (duh).</p>
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Features</h3>
-WIP
+<p>Low-level API</p>
+<ul>
+<li>* Fullscreen support (Supported platforms).</li>
+<li>* Multiple image file formats: DDS, JPG, PNG and TGA.</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Define a transparent color</li>
+<li>* Scene Structure</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Overlay scenes </li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Pause scene</li>
+<li>* Multiplayer model</li>
+<li>* Preloading</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Get the percentage of loading</li>
+<li>* Elements Manipulation</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Manipulation : jQuery syntaxe</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Draw : HTML5 Canvas API syntaxe</li>
+<li>* Utilities</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* merge object</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* class</li>
+</ul>
+<p>Windows</p>
+<ul>
+<li>* Dialog box with the outline</li>
+<li>* Cursor</li>
+</ul>
+<p>Animations</p>
+<ul>
+<li>* Set an animation from a spritesheet</li>
+<li>* Frequence and animation speed</li>
+<li>* Sequence of multiple image</li>
+<li>* Creating a custom animation with multiple sequences</li>
+<li>* Display once, loop or temporary</li>
+</ul>
+<p>Timeline (aka Tween)</p>
+<ul>
+<li>* Easy to make interpolations effects</li>
+<li>* 29 Effects :</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* easeInQuad, easeOutQuad, easeInCubic, easeOutCubic, etc.</li>
+<li>* Loop</li>
+</ul>
+<p>Collision</p>
+<ul>
+<li>* Entities model</li>
+<li>* Test collision with virtual grid</li>
+<li>* Polygon intersection and Contains Point.</li>
+</ul>
+<p>Text</p>
+<ul>
+<li>* Set maximum line width</li>
+<li>* Display effect</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Line by line</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Character by character</li>
+<li>* font file formats : TTF, EOT</li>
+<li>* external fonts</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Google Fonts</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Fontdeck</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Fonts.com</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Typekit</li>
+</ul>
+<p>Sound</p>
+<ul>
+<li>* Multiple sound file formats: OGG, WAV, MP3.</li>
+<li>* Fading effects</li>
+<li>* Web Audio or SoundManager2</li>
+</ul>
+<p>Effects</p>
+<ul>
+<li>* Change tone screen</li>
+<li>* Perform a flash</li>
+<li>* Shake screen</li>
+</ul>
+<p>Scrolling</p>
+
+
+<p>Level Design</p>
+<ul>
+<li>* Tiled Map Editor (http://www.mapeditor.org)</li>
+<li>* Gleed 2d (http://gleed2d.codeplex.com)</li>
+</ul>
+<p>Save & Load</p>
+<ul>
+<li>* Encoding with BISON.js</li>
+</ul>
+<p>Spritesheet Management</p>
+
+<p>Input</p>
+<ul>
+<li>* Access to input types: Keyboard, Mouse, Xbox360 Pad, Joysticks</li>
+<li>* click, dbclick, mousemove, mouseup, mousedown, mouseout, mouseover</li>
+<ul>* Multi-Touch with Hammer.js : </li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* hold</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* tap</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* doubletap</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* drag, dragstart, dragend, dragup, dragdown, dragleft, dragright</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* swipe, swipeup, swipedown, swipeleft, swiperight</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* transform, transformstart, transformend</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* rotate</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* pinch, pinchin, pinchout</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* touch (gesture detection starts)</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* release (gesture detection ends)</li>
+</ul>
+
+<p>Thanks</p>
+<ul>
+<il>CanvasEngine (PyroBox's 2D part is a fork of this)</il>
+</ul>
+<p>License</p>
+
+MIT. Free for commercial use.
       </section>
 
     </div>
