@@ -6,11 +6,22 @@ http://ubuntuz.github.io/PyroBox
 A HTML5 2D/3D Content Creation Engine - "Use whats inside the box to create something out of the box."
 Perfect for Games, Presentations, Tech Demos, anything!
 
+## Why PyroBox?
+
+PyroBox is one of very few engines to combine 2D and 3D graphics into one, helping end users end the search for two engines - which may use different
+languages. By combining them into one the transition is easy, plus, both graphic types could be used in one project effortlessly, cleanly and efficently.
+
+PyroBox also uses HTML5 technology, why? Because HTML5 is an evolving platform for distribution, gaining popularity rapidly. Of course, you can still publish
+natively to platforms (mobile support in the works), aswell as straight onto the web for easy accessing without your end user install any plugins.
+
+PyroBox is also open-source, allowing for developers to submit issues or even submit their own fixes/features. This engine will be constantly updated, and
+it can all be seen from our github page.
+
 ## Get Started
 
 Follow the steps below to start:
 
-1. Download the code `canvasengine-X.Y.Z.all.min.js` on Github or this website
+1. Download our code on Github
 2. Add this code in your page : 
         
 		<!DOCTYPE html>
@@ -24,7 +35,7 @@ Follow the steps below to start:
          
         });
 
-Method `ready` is called when the canvas is ready (DOM loaded)
+Method `ready` is called when the canvas is ready (DOM has loaded)
 
 ## Use development files
 
