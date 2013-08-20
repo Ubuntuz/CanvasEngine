@@ -1,5 +1,5 @@
 # PyroBox
-http://canvasengine.net
+http://ubuntuz.github.io/PyroBox
 
 ## Description
 
