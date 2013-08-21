@@ -1,5 +1,14 @@
 Confirm() { read -sn 1 -p "$* [Y/N]? "; [[ ${REPLY:0:1} = [Yy] ]]; }
 
+clear
+echo "Select Project to Build:"
+cd ../Projects
+select fname in *;
+do
+	echo you picked $fname \($REPLY\)
+	break;
+done
+
 platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
@@ -22,7 +31,7 @@ function mac {
 	sleep 2
 	echo "0% Total"
 	echo "Packaging into app.nw: ..."
-	zip -9 -q -r app.nw ../engine/. @excluded.lst
+	zip -9 -q -r app.nw ../Projects/$fname/. @excluded.lst
 	sleep 1
 	echo "Packaging into app.nw: DONE"
 	sleep 1
@@ -36,6 +45,8 @@ function mac {
 	echo "*****************************"
 	echo "Compiled into node-webkit.app"
 	echo "*****************************"
+	sleep 2
+	clear
 	echo "Open node-webkit.app,"
 	if Confirm "Yes or No?"; then
 		open -a node-webkit.app
@@ -56,6 +67,7 @@ function linux {
 echo Soon
 }
 clear
+	cd ../Citrus
 echo "  ---------------------------"
 echo "  |Citrus - PyroBox Packager|"
 echo "  |Building on: $platform   |" 
