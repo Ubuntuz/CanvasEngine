@@ -22,7 +22,7 @@ function mac {
 	sleep 2
 	echo "0% Total"
 	echo "Packaging into app.nw: ..."
-	zip -9 -q -r app.nw . @excluded.lst
+	zip -9 -q -r app.nw ../engine/. @excluded.lst
 	sleep 1
 	echo "Packaging into app.nw: DONE"
 	sleep 1
