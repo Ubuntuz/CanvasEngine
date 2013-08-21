@@ -29,7 +29,7 @@ Follow the steps below to start:
 2. Add this code in your page : 
         
 		<!DOCTYPE html>
-		<script src="canvasengine-X.Y.Z.all.min.js"></script>
+		<script src="pyrobox.js"></script>
 		<canvas id="canvas_id" width="640" height="480"></canvas>
 		
        
