@@ -471,13 +471,13 @@ CanvasEngine.parseJSON = function(json) {
 @example
 
 	var foo = ["bar", "test"];
-	CE.each(foo, function(i, val) {
+	PB.each(foo, function(i, val) {
 		console.log(val);
 	});
 
 
 	var foo = ["bar", "test"];
-	CE.each(2, function(i) {
+	PB.each(2, function(i) {
 		console.log(foo[i]);
 	});
 
@@ -498,7 +498,7 @@ CanvasEngine.each = function(array, callback) {
 
 /**
 	@doc utilities/
-	@method inArray The CE.inArray() method is similar to JavaScript's native .indexOf() method in that it returns -1 when it doesn't find a match. If the first element within the array matches value, CE.inArray() returns 0.
+	@method inArray The PB.inArray() method is similar to JavaScript's native .indexOf() method in that it returns -1 when it doesn't find a match. If the first element within the array matches value, PB.inArray() returns 0.
 
 	Because JavaScript treats 0 as loosely equal to false (i.e. 0 == false, but 0 !== false), if we're checking for the presence of value within array, we need to check if it's not equal to (or greater than) -1.
 	@static
@@ -601,10 +601,10 @@ CanvasEngine.random = function(min, max) {
 @return {String|Boolean} name of the agent user ("iphone", "ipod", "ipad", "blackberry", "android" or "windows phone") or false if it is not a mobile
 @example
 
-	if (CE.mobileUserAgent()) {
+	if (PB.mobileUserAgent()) {
 		// It's a mobile
 	}
-	if (CE.mobileUserAgent() == "android") {
+	if (PB.mobileUserAgent() == "android") {
 		// It's a Android mobile
 	}
 */
@@ -660,7 +660,7 @@ CanvasEngine.objectSize = function(obj) {
 @params {Object} obj An object containing additional properties to merge in.
 @examples
 
-	CE.extend({a: 1}, {b: 2}); // =>{a: 1, b: 2}
+	PB.extend({a: 1}, {b: 2}); // =>{a: 1, b: 2}
 
 @return {Object} 
 */
@@ -702,7 +702,7 @@ CanvasEngine.extend = function(obj1, obj2, clone) {
 
 Example
 
-	if (CE.browser.msie) {
+	if (PB.browser.msie) {
 		// if browser is Internet Explorer
 	}
 
@@ -712,7 +712,7 @@ Knowing the browser version :
 
 Example
 
-	if (CE.browser.msie && parseInt(CE.browser.version) == 9) { // crop value
+	if (PB.browser.msie && parseInt(PB.browser.version) == 9) { // crop value
 		// if browser is Internet Explorer 9
 	}
 	
@@ -722,7 +722,7 @@ Knowing the browser used by the user :
 
 Example
 	
-	CE.browser.which(); // returns {ua: "mozilla", version: "22.0"}
+	PB.browser.which(); // returns {ua: "mozilla", version: "22.0"}
 
 @type Object
 */

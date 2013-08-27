@@ -124,7 +124,7 @@ Class.create("ModelClientClass", {
 });
 
 var Model = Class["new"]("ModelClientClass"),
-	Global_CE;
+	Global_PB;
 	
 /**
 @doc server/
@@ -134,8 +134,8 @@ var Model = Class["new"]("ModelClientClass"),
 @default null
 @example
 
-	CE.connectServer('http://127.0.0.1', 8333);
-	CE.io.emit("Foo", {bar: "test"});
+	PB.connectServer('http://127.0.0.1', 8333);
+	PB.io.emit("Foo", {bar: "test"});
 
 */
 CanvasEngine.io = null;
@@ -200,8 +200,8 @@ To use Socket.io , do not forget to put the JS file :
 @return CanvasEngineClass
 @example
 
-	CE.connectServer('http://127.0.0.1', 8333);
-	CE.io.on("reconnecting", function() {
+	PB.connectServer('http://127.0.0.1', 8333);
+	PB.io.on("reconnecting", function() {
 		console.log("reconnecting");
 	});
 				 
@@ -245,7 +245,7 @@ CanvasEngine.connectServer = function(host, port) {
 
 	Example :
 	
-		var canvas = CE.defines("canvas_id", {
+		var canvas = PB.defines("canvas_id", {
 			ignoreLoadError: true
 		}).
 		 ready(function() {
@@ -269,9 +269,9 @@ CanvasEngine.connectServer = function(host, port) {
 		
 @return CanvasEngineClass
 @example
-"CE"  is equivalent to "CanvasEngine"
+"PB"  is equivalent to "CanvasEngine"
 
-	var canvas = CE.defines("canvas_id").
+	var canvas = PB.defines("canvas_id").
 				 ready(function() {
 					// DOM is ready
 				 });
@@ -289,7 +289,7 @@ CanvasEngine.defines = function(canvas, params) {
 @doc engine
 @class CanvasEngineClass Main class to use Canvas Engine
 		
-	var canvas = CE.defines("canvas_id"); // CanvasEngine object
+	var canvas = PB.defines("canvas_id"); // CanvasEngine object
 
 	canvas.ready(function(ctx) {
 		canvas.Scene.call("MyScene");
@@ -309,7 +309,7 @@ CanvasEngine.defines = function(canvas, params) {
 @return CanvasEngineClass
 @example
 
-	var canvas = CE.defines("canvas_id").
+	var canvas = PB.defines("canvas_id").
 				 ready(function() {
 					// DOM is ready
 				 });
@@ -317,7 +317,7 @@ CanvasEngine.defines = function(canvas, params) {
 With jQuery :
 
 	$(function() {
-		var canvas = CE.defines("canvas_id").ready();
+		var canvas = PB.defines("canvas_id").ready();
 	});
 */
 		ready: function(callback) {
@@ -364,7 +364,7 @@ With jQuery :
 @example
 Using Sound :
 
-	var canvas = CE.defines("canvas_id").
+	var canvas = PB.defines("canvas_id").
 		ready(function() {
 			canvas.Scene.call("MyScene");
 		});
@@ -1090,7 +1090,7 @@ Use :
 * Insert the JS script : `<script src="soundmanager2.js"></script>` [http://www.schillmania.com/projects/soundmanager2/doc/getstarted/#basic-inclusion](http://www.schillmania.com/projects/soundmanager2/doc/getstarted/#basic-inclusion)
 * Put the swf file to the root of your project. If you want to change the path :
 
-		var canvas = CE.defines("canvas_id", {
+		var canvas = PB.defines("canvas_id", {
 			soundmanager: {
 				url: 'path/to/swf/'
 			}
@@ -1103,7 +1103,7 @@ Use :
 @example
 Using Sound :
 	
-	var canvas = CE.defines("canvas_id").
+	var canvas = PB.defines("canvas_id").
 		ready(function() {
 			canvas.Scene.call("MyScene");
 		});
@@ -2102,7 +2102,7 @@ The resources defined in "Materials" are loaded and regularly calls the method "
 	
 	var Model = io.connect('http://127.0.0.1:8333');
 
-	var canvas = CE.defines("canvas").
+	var canvas = PB.defines("canvas").
 		ready(function() {
 		canvas.Scene.call("MyScene");
 	 });
@@ -2330,7 +2330,7 @@ Create two elements :
 			
 			if (this.model) {		
 				if (this._events) {
-					CE.each(this._events, function(i, val) {
+					PB.each(this._events, function(i, val) {
 						self.model.on(val, function(data) {
 							self[val].call(self, data);
 						});
@@ -3001,7 +3001,7 @@ In the method "ready" in the scene class :
 						}
 					}
 				}
-				//CE.benchmark("draw method");
+				//PB.benchmark("draw method");
 
 			},
 			_addCmd: function(name, params, propreties) {
@@ -4289,14 +4289,14 @@ or
 		}
 	}).extend("Context");
 	
-	Global_CE = CanvasEngine = Class["new"]("CanvasEngineClass");
+	Global_PB = CanvasEngine = Class["new"]("CanvasEngineClass");
 	return CanvasEngine;
 }
 
 CanvasEngine.Core = CanvasEngine;
 CanvasEngine.Class = Class;
 
-var CE = CanvasEngine;
+var PB = CanvasEngine;
 
 /*! Hammer.JS - v1.0.3 - 2013-03-02
  * http://eightmedia.github.com/hammer.js
