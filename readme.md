@@ -144,6 +144,20 @@ Method `ready` is called when the canvas is ready (DOM has loaded)
     * touch (gesture detection starts)
     * release (gesture detection ends)
 
+## FAQ
+##### Q: How do I use PyroBox?
+      A: Take a look at our documentation to get started!
+
+##### Q: What programming language does PyroBox uses?
+      A: JavaScript.
+
+##### Q: Why did you fork CanvasEngine and three.js?
+      A: Why reinvent the wheel?
+         To keep development quick we forked these existing pieces of work, combined them, added our tools and continued adding features.
+
+##### Q: HTML5? Ew. That will be slow...
+      A: Nope! Most popular browsers (and our native ports) have access to your hardware - so you will get almost the same speed as anything else!
+
 ## License
 
 MIT. Free for commercial use.
